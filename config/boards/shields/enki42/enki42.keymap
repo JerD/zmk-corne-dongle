@@ -18,29 +18,29 @@
 &lt { quick_tap_ms = <220>; };
 &mt { quick_tap_ms = <220>; };
 
-/ {
-    behaviors {
-        curly: curly {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LS(LBKT)>, <&kp LS(RBKT)>;
-        };
-
-        parenth: parenth {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LS(N9)>, <&kp LS(N0)>;
-        };
-
-        sqrbrkt: sqrbrkt {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
-        };
-    };
+/// {
+//    behaviors {
+//        curly: curly {
+//            compatible = "zmk,behavior-tap-dance";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <200>;
+//            bindings = <&kp LS(LBKT)>, <&kp LS(RBKT)>;
+//        };
+//
+//        parenth: parenth {
+//            compatible = "zmk,behavior-tap-dance";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <200>;
+//            bindings = <&kp LS(N9)>, <&kp LS(N0)>;
+//        };
+//
+//        sqrbrkt: sqrbrkt {
+//            compatible = "zmk,behavior-tap-dance";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <200>;
+//            bindings = <&kp LBKT>, <&kp RBKT>;
+//        };
+//    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -69,9 +69,9 @@
         symbol_layer {
             bindings = <
 
-&trans  &kp LS(FSLH)    &kp LS(N2)  &kp EQUAL   &kp LS(8)   &kp LS(NUHS)                    &kp RA(N4)  &kp LS(MINUS)   &sqrbrkt        &kp LS(NUBS)   &parenth    &trans
+&trans  &kp LS(FSLH)    &kp LS(N2)  &kp EQUAL   &kp LS(8)   &kp LS(NUHS)                    &kp RA(N4)  &kp LS(MINUS)   &trans        &kp LS(NUBS)   &trans    &trans
 &trans  &kp LS(N7)      &trans      &kp LS(N4)  &kp FSLH    &kp GRAVE                       &kp NUHS    &trans          &kp LS(EQUAL)   &trans      &trans      &trans
-&trans  &trans          &kp LS(N5)  &trans      &curly      &kp LS(N6)                      &trans      &kp LS(N2)      &kp MINUS       &trans      &trans      &trans
+&trans  &trans          &kp LS(N5)  &trans      &trans      &kp LS(N6)                      &trans      &kp LS(N2)      &kp MINUS       &trans      &trans      &trans
                                                 &mt ADJ      &trans   &trans         &trans  &trans      &trans
             >;     
         };    
